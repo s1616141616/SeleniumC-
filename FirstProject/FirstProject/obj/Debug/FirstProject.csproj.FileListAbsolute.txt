@@ -17,3 +17,6 @@ D:\seleniumdotnet\FirstProject\FirstProject\obj\Debug\FirstProject.csproj.CoreCo
 D:\seleniumdotnet\FirstProject\FirstProject\obj\Debug\FirstProject.csproj.CopyComplete
 D:\seleniumdotnet\FirstProject\FirstProject\obj\Debug\FirstProject.exe
 D:\seleniumdotnet\FirstProject\FirstProject\obj\Debug\FirstProject.pdb
+D:\seleniumdotnet\FirstProject\FirstProject\bin\Debug\WebDriver.Support.dll
+D:\seleniumdotnet\FirstProject\FirstProject\bin\Debug\WebDriver.Support.xml
+D:\seleniumdotnet\FirstProject\FirstProject\obj\Debug\FirstProject.csprojAssemblyReference.cache

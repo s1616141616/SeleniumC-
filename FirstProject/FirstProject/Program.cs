@@ -39,11 +39,20 @@ namespace FirstProject
             element.SendKeys(Keys.Tab);
             element.SendKeys(Keys.Enter);
         }
+        
+        [Test]
+        public void GmailSignUpTest()
+        {
+            driver = new ChromeDriver();
+            driver.Navigate().GoToUrl("https://accounts.google.com/signup/v2/webcreateaccount?hl=en-GB&flowName=GlifWebSignIn&flowEntry=SignUp");
+            Console.Write("Regintering new gmail account..");
+            Methods.InputText(driver, "firstName", "Mohammad", "Id");
+        }
 
         [TearDown]
-        public void CloseBrowser()
-        {
+        public void CloseBrowser() {
             driver.Close();
         }
+        
     }
 }
