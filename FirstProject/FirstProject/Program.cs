@@ -21,38 +21,44 @@ namespace FirstProject
         }
 
         [Test]
-        public void LaunchFirefoxBrowser()
-        {
-            driver = new FirefoxDriver();
-            driver.Navigate().GoToUrl("https://www.google.com");
-            Console.Write("Google Search");
+        public void LaunchFirefoxBrowserTest() {
+        FirefoxDriverLauncher.LaunchFirefoxBrowser("https://www.google.com");
         }
 
         [Test]
-        public void LaunchChromeBrowser()
-        {
-            driver = new ChromeDriver();
-            driver.Navigate().GoToUrl("https://www.amazon.com");
-            Console.Write("Searching in Amazon....");
-            IWebElement element = driver.FindElement(By.XPath("//input[@id='twotabsearchtextbox']"));
-            element.SendKeys("Osama Bin Laden");
-            element.SendKeys(Keys.Tab);
-            element.SendKeys(Keys.Enter);
-        }
-        
-        [Test]
-        public void GmailSignUpTest()
-        {
-            driver = new ChromeDriver();
-            driver.Navigate().GoToUrl("https://accounts.google.com/signup/v2/webcreateaccount?hl=en-GB&flowName=GlifWebSignIn&flowEntry=SignUp");
-            Console.Write("Regintering new gmail account..");
-            Methods.InputText(driver, "firstName", "Mohammad", "Id");
+        public void LaunchChromeBrowserTest() {
+        FirefoxDriverLauncher.LaunchFirefoxBrowser("https://www.youtube.com");
         }
 
-        [TearDown]
-        public void CloseBrowser() {
-            driver.Close();
+        [Test]
+        public void LaunchFirefoxBrowser()  {
+        driver = new FirefoxDriver();
+        driver.Navigate().GoToUrl("https://www.google.com");
+        Console.Write("Google Search");
         }
-        
+
+        [Test]
+        public void LaunchChromeBrowser()   {
+        driver = new ChromeDriver();
+        driver.Navigate().GoToUrl("https://www.amazon.com");
+        Console.Write("Searching in Amazon....");
+        IWebElement element = driver.FindElement(By.XPath("//input[@id='twotabsearchtextbox']"));
+        element.SendKeys("Osama Bin Laden");
+        element.SendKeys(Keys.Tab);
+        element.SendKeys(Keys.Enter);
+        }
+
+        [Test]
+        public void GmailSignUpTest()   {
+        driver = new ChromeDriver();
+        driver.Navigate().GoToUrl("https://accounts.google.com/signup/v2/webcreateaccount?hl=en-GB&flowName=GlifWebSignIn&flowEntry=SignUp");
+        Console.Write("Regintering new gmail account..");
+        Methods.InputText(driver, "firstName", "Mohammad", "Id");
+        }
+
+        /*[TearDown]
+        public void CloseBrowser()  {
+        driver.Close();
+        }*/
     }
 }
